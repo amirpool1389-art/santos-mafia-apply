@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0b0b0b;
+    color:#fff;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 15px;
+}
+
+.background{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top,#8a6b1f22,transparent 40%),
+    radial-gradient(circle at bottom,#8a6b1f11,transparent 40%);
+    z-index:-1;
+}
+
+.container{
+    width:100%;
+    max-width:650px;
+}
+
+.card{
+    background:rgba(20,20,20,.92);
+    border:1px solid rgba(212,175,55,.35);
+    border-radius:22px;
+    padding:35px;
+    backdrop-filter:blur(15px);
+    box-shadow:0 0 40px rgba(0,0,0,.6);
+    animation:fade .8s ease;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+h1{
+    text-align:center;
+    color:#d4af37;
+    font-size:40px;
+    letter-spacing:2px;
+    margin-bottom:8px;
+}
+
+.subtitle{
+    text-align:center;
+    font-size:20px;
+    font-weight:600;
+}
+
+.desc{
+    text-align:center;
+    color:#bfbfbf;
+    margin:10px 0 30px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+    background:#161616;
+    border:1px solid #2d2d2d;
+    color:white;
+    padding:15px;
+    border-radius:12px;
+    font-size:15px;
+    transition:.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+    border-color:#d4af37;
+    box-shadow:0 0 12px rgba(212,175,55,.4);
+}
+
+textarea{
+    resize:none;
+}
+
+.checkbox{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    font-size:14px;
+}
+
+.checkbox input{
+    width:auto;
+}
+
+button{
+
+    background:#d4af37;
+    color:#111;
+    font-weight:bold;
+    font-size:17px;
+    border:none;
+    border-radius:14px;
+    padding:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+
+    background:#e7c75a;
+    transform:translateY(-3px);
+}
+
+@media(max-width:700px){
+
+.card{
+padding:25px;
+}
+
+h1{
+font-size:30px;
+}
+
+.subtitle{
+font-size:17px;
+}
+
+}
